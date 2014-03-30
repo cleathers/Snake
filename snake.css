@@ -1,0 +1,27 @@
+.container {
+  background-color :black;
+  width :600px;
+  height :600px;
+}
+
+.container > div {
+  height :5%;
+}
+
+.tile {
+  background-color :white;
+  width :5%;
+  height :100%;
+  margin :0;
+  padding :0;
+  border: 1px;
+  display :inline-block;
+}
+
+.snake {
+  background: green;
+}
+
+.mouse {
+  background: gray;
+}
