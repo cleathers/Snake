@@ -64,7 +64,7 @@
       if (this.segments[i].pos[0] == firstPos[0] && this.segments[i].pos[1] == firstPos[1]) {
         console.log(this.segments);
         console.log("first", firstPos);
-        debugger
+
         return true
       }
     }

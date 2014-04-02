@@ -18,8 +18,9 @@
 
   Board.prototype.spawnMouse = function(){
     var mouse = new SnakeGame.Mouse(this.grid.length);
-    while(this.grid[mouse.pos[1], mouse.pos[0]] == 'S'){
-      mouse.pos = mouse.randomPos();
+
+    while(this.grid[mouse.pos[1]][mouse.pos[0]] === "S"){
+      mouse.pos = mouse.randomPos(this.grid.length);
     }
 
     this.grid[mouse.pos[1]][mouse.pos[0]] = 'M';
