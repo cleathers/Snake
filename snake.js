@@ -64,7 +64,7 @@
       if (this.segments[i].pos[0] == firstPos[0] && this.segments[i].pos[1] == firstPos[1]) {
         console.log(this.segments);
         console.log("first", firstPos);
-        debugger
+
         return true
       }
     }
@@ -91,4 +91,8 @@
     this.pos[1] += x; 0
   }
 
+<<<<<<< HEAD
 })(this);
+=======
+})(this);
+>>>>>>> gh-pages
