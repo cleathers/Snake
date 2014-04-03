@@ -91,8 +91,4 @@
     this.pos[1] += x; 0
   }
 
-<<<<<<< HEAD
 })(this);
-=======
-})(this);
->>>>>>> gh-pages

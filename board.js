@@ -7,6 +7,7 @@
     this.snake = new SnakeGame.Snake();
     this.setSnake();
     this.mouse = this.spawnMouse();
+    this.score = 0;
   }
 
   Board.prototype.setSnake = function(){
@@ -29,6 +30,7 @@
   }
 
   Board.prototype.render = function() {
+    $('#score').html('Score: ' + this.score);
     this.grid.forEach(function(row) {
       console.log(row);
     })
@@ -44,11 +46,14 @@
 
     var firstPos = _.first(this.snake.segments).pos;
     if (this.snake.checkCollision(firstPos))
-      alert("YOU LOSE!")
+      return false;
+      
 
     if (firstPos[0] == this.mouse.pos[0] && firstPos[1] == this.mouse.pos[1]){
       this.snake.grow(lastPos);
       this.mouse = this.spawnMouse();
+      this.score += 1;
+      $('#score').html('Score: ' + this.score);
     }
 
     this.grid[firstPos[1]][firstPos[0]] = 'S';
@@ -71,8 +76,4 @@
     return grid;
   }
 
-<<<<<<< HEAD
 })(this)
-=======
-})(this)
->>>>>>> gh-pages

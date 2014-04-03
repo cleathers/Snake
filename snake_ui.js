@@ -14,14 +14,17 @@
       that.handleKeyEvent(event)
     });
 
-    setInterval(this.step.bind(this), 100);
+    setInterval(this.step.bind(this), 300);
   }
 
 
   View.prototype.step = function() {
-    this.board.update();
-    //this.board.render();
-    this.render();
+    if (this.board.update() == false) {
+      this.$outter.empty();
+    } else {
+      this.board.update();
+      this.render();
+    }
   }
 
   View.prototype.render = function() {
